@@ -5,8 +5,12 @@ itemList.addEventListener("click",removeItem);
 function addItem(e){
     e.preventDefault();
     let new_item = document.getElementById("item").value;
+    let inputValue = document.getElementById("item").value;
+    let description = document.getElementById("description").value;
     let li = document.createElement("li");
     li.className = "list-group-item";
+    let newText = document.createTextNode(inputValue);
+    let descriptionNode = document.createTextNode(description);
     li.appendChild(document.createTextNode(new_item));
     itemList.appendChild(li);
     let delbtn = document.createElement("button");
